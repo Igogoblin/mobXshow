@@ -10,7 +10,7 @@ const AppRoutes = () => {
       element: <MainPage />,
     },
     {
-      path: "/apps",
+      path: "/apps/:appID?",
       element: <AppPage />,
     },
     {
