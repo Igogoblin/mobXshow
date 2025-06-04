@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, message, Steps, theme } from "antd";
+import { Button, Steps, theme } from "antd";
 import Counter from "./counter";
 import Todo from "./todo";
 import Weather from "./weather";
@@ -29,7 +29,7 @@ const AppSteps: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const currentPath = location.pathname.split("/").pop();
+  const currentPath = location.pathname.split("/").pop() || "";
   const currentStepIndex = steps.findIndex((step) =>
     step.path.endsWith(currentPath)
   );
