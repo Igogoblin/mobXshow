@@ -6,7 +6,7 @@ import { DownOutlined, UpOutlined } from "@ant-design/icons";
 const Counter = observer(() => {
   const { increment, decrement, count } = counterStore;
   return (
-    <Flex vertical align="center" justify="start" style={{ height: "100vh" }}>
+    <Flex vertical align="center" justify="start" style={{ padding: "20px" }}>
       <Typography.Title level={2}>Counter</Typography.Title>
       <Typography.Paragraph>
         This is a simple counter application. You can increment or decrement the
@@ -21,7 +21,11 @@ const Counter = observer(() => {
         >
           Уменьшить
         </Button>
-        <Button type="text" disabled>
+        <Button
+          type="text"
+          disabled
+          style={{ color: "black", fontSize: "24px" }}
+        >
           {count}
         </Button>
         <Button
